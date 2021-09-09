@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="root">
-        <input type="text" v-model= "consegna" placeholder="inserisci una consegna">
+        <input type="text" v-model= "consegna" @keydown.enter= "aggiungi" placeholder="inserisci una consegna">
         <button @click= "aggiungi">Aggiungi</button>
         <ul>
             <li v-for= "(consegna,index) in consegne">
