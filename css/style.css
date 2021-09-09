@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
-.red {
-    color: rgb(235, 34, 34);
+ul li {
+    margin: 30px;
 }
 
-.blue {
-    color: rgb(96, 209, 96);
+.red {
+    background-color: rgb(235, 34, 34);
+}
+
+.green {
+    background-color: rgb(96, 209, 96);
 }

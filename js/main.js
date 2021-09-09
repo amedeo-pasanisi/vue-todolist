@@ -4,19 +4,25 @@ const app = new Vue (
     {
         el: "#root",
         data: {
-            consegna: "",
-            consegne: [
-
-            ]
+            testo: "",
+            consegne: [],
+            classi: ["red","green"]
         },
         methods: {
             aggiungi () {
                 if (this.consegna!= "")
-                this.consegne.push(this.consegna);
-                this.consegna = "";
+                this.consegne.push({
+                    consegna: this.testo,
+                    fatto: false
+                });
+                this.testo = "";
             },
             rimuovi (index) {
                 this.consegne.splice(index,1);
+            },
+            toggle (index) {
+                this.consegne[index].fatto = !this.consegne[index].fatto;
+                console.log (this.consegne[index].fatto);
             }
         }
     }
