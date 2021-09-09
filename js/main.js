@@ -10,7 +10,7 @@ const app = new Vue (
         },
         methods: {
             aggiungi () {
-                if (this.consegna!= "")
+                if (this.testo!= "")
                 this.consegne.push({
                     consegna: this.testo,
                     fatto: false
@@ -22,7 +22,6 @@ const app = new Vue (
             },
             toggle (index) {
                 this.consegne[index].fatto = !this.consegne[index].fatto;
-                console.log (this.consegne[index].fatto);
             }
         }
     }
